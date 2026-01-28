@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUNT VERIDIA</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/roblox.png">
+    
+    <!-- Font Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GSAP Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+<body class="no-scroll">
+
+    <!-- ===== GATE SCREEN ===== -->
+    <div class="gate" id="gate">
+        <!-- Background Layers -->
+        <div class="gate__bg-layer gate__bg-layer--1"></div>
+        <div class="gate__bg-layer gate__bg-layer--2"></div>
+        <div class="gate__bg-layer gate__bg-layer--3"></div>
+        
+        <!-- Floating Particles -->
+        <div class="gate__particles" id="gateParticles"></div>
+        
+        <!-- Main Content -->
+        <div class="gate__content">
+            <!-- Animated Logo -->
+            <div class="gate__logo-container">
+                <div class="gate__logo-wrapper">
+                    <div class="gate__logo-outer">
+                        <div class="gate__logo-inner">
+                            <img src="assets/logoplay.png" alt="Mount Veridia Logo" class="gate__logo">
+                        </div>
+                        <div class="gate__logo-rings">
+                            <div class="gate__logo-ring gate__logo-ring--1"></div>
+                            <div class="gate__logo-ring gate__logo-ring--2"></div>
+                            <div class="gate__logo-ring gate__logo-ring--3"></div>
+                        </div>
+                        <div class="gate__logo-shine"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Animated Title -->
+            <div class="gate__title-wrapper">
+                <div class="gate__title-mask">
+                    <h1 class="gate__title">
+                        <span class="gate__title-line gate__title-line--1">WELCOME TO</span>
+                        <span class="gate__title-line gate__title-line--2">MOUNT VERIDIA</span>
+                    </h1>
+                </div>
+                <div class="gate__title-glow"></div>
+            </div>
+            
+            <!-- Animated Description -->
+            <div class="gate__desc-wrapper">
+                <p class="gate__desc">
+                    Selamat Bermain Di Gunung Veridia Semoga Betah
+                </p>
+                <div class="gate__desc-line"></div>
+            </div>
+            
+            <!-- Animated Button -->
+            <div class="gate__btn-container">
+                <button class="gate__btn" id="gateBtn">
+                    <span class="gate__btn-text">GASS</span>
+                    <div class="gate__btn-hover"></div>
+                    <div class="gate__btn-sparks">
+                        <span class="gate__btn-spark"></span>
+                        <span class="gate__btn-spark"></span>
+                        <span class="gate__btn-spark"></span>
+                        <span class="gate__btn-spark"></span>
+                        <span class="gate__btn-spark"></span>
+                    </div>
+                    <div class="gate__btn-pulse"></div>
+                </button>
+                <div class="gate__btn-trail"></div>
+            </div>
+        </div>
+        
+        <!-- Progress Indicator -->
+        <div class="gate__progress">
+            <div class="gate__progress-bar"></div>
+            <div class="gate__progress-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- ===== BACKGROUND EFFECTS ===== -->
+    <div class="bg-effects">
+        <div class="bg-effect bg-effect--1"></div>
+        <div class="bg-effect bg-effect--2"></div>
+        <div class="bg-effect bg-effect--3"></div>
+        <div class="bg-grid"></div>
+        <div class="bg-lines"></div>
+        <div class="bg-shapes"></div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <!-- Animated Logo -->
+                <div class="header__logo">
+                    <div class="header__logo-icon">
+                        <img src="https://img.icons8.com/color/96/000000/roblox.png" alt="Mount Veridia" class="header__logo-img">
+                        <div class="header__logo-dot"></div>
+                    </div>
+                    <div class="header__logo-text">
+                        <span class="header__logo-title">MOUNT VERIDIA</span>
+                        <span class="header__logo-sub">Roblox</span>
+                    </div>
+                    <div class="header__logo-underline"></div>
+                </div>
+
+                <!-- Animated Navigation -->
+                <nav class="nav">
+                    <div class="nav__line"></div>
+                    <a href="#home" class="nav__link active" data-text="HOME">
+                        <span class="nav__link-text">HOME</span>
+                        <span class="nav__link-glow"></span>
+                    </a>
+                    <a href="#features" class="nav__link" data-text="FEATURES">
+                        <span class="nav__link-text">FEATURES</span>
+                        <span class="nav__link-glow"></span>
+                    </a>
+                    <a href="#updates" class="nav__link" data-text="UPDATES">
+                        <span class="nav__link-text">UPDATES</span>
+                        <span class="nav__link-glow"></span>
+                    </a>
+                    <a href="#team" class="nav__link" data-text="TEAM">
+                        <span class="nav__link-text">TEAM</span>
+                        <span class="nav__link-glow"></span>
+                    </a>
+                    <a href="#community" class="nav__link" data-text="COMMUNITY">
+                        <span class="nav__link-text">COMMUNITY</span>
+                        <span class="nav__link-glow"></span>
+                    </a>
+                </nav>
+
+                <!-- Animated Action Buttons -->
+                <div class="header__actions">
+                    <a href="https://discord.gg/roblox" target="_blank" class="btn btn--discord">
+                        <div class="btn__icon-wrapper">
+                            <img src="https://img.icons8.com/color/96/000000/discord-logo.png" alt="Discord" class="btn__icon">
+                            <div class="btn__icon-glow"></div>
+                        </div>
+                        <span class="btn__text">JOIN DISCORD</span>
+                        <div class="btn__hover"></div>
+                    </a>
+                    
+                    <a href="https://ro.blox.com/Ebh5?af_dp=roblox%3A%2F%2Fnavigation%2Fgame_details%3FgameId%3D9600275324&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2F140529184232468" target="_blank" class="btn btn--primary">
+                        <span class="btn__text">PLAY VERIDIA</span>
+                        <div class="btn__shine"></div>
+                        <div class="btn__particles"></div>
+                    </a>
+                </div>
+
+                <!-- Animated Mobile Menu -->
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="menu-toggle__line menu-toggle__line--1"></span>
+                    <span class="menu-toggle__line menu-toggle__line--2"></span>
+                    <span class="menu-toggle__line menu-toggle__line--3"></span>
+                    <div class="menu-toggle__circle"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__backdrop"></div>
+        <div class="mobile-menu__content">
+            <div class="mobile-menu__header">
+                <div class="mobile-menu__logo">
+                    <img src="https://img.icons8.com/color/96/000000/roblox.png" alt="Mount Veridia">
+                </div>
+                <div class="mobile-menu__title">MOUNT VERIDIA</div>
+            </div>
+            
+            <div class="mobile-menu__links">
+                <a href="#home" class="mobile-menu__link">
+                    <span class="mobile-menu__link-text">HOME</span>
+                    <span class="mobile-menu__link-indicator"></span>
+                </a>
+                <a href="#features" class="mobile-menu__link">
+                    <span class="mobile-menu__link-text">FEATURES</span>
+                    <span class="mobile-menu__link-indicator"></span>
+                </a>
+                <a href="#updates" class="mobile-menu__link">
+                    <span class="mobile-menu__link-text">UPDATES</span>
+                    <span class="mobile-menu__link-indicator"></span>
+                </a>
+                <a href="#team" class="mobile-menu__link">
+                    <span class="mobile-menu__link-text">TEAM</span>
+                    <span class="mobile-menu__link-indicator"></span>
+                </a>
+                <a href="#community" class="mobile-menu__link">
+                    <span class="mobile-menu__link-text">COMMUNITY</span>
+                    <span class="mobile-menu__link-indicator"></span>
+                </a>
+            </div>
+            
+            <div class="mobile-menu__actions">
+                <a href="https://discord.gg/roblox" target="_blank" class="mobile-menu__action mobile-menu__action--discord">
+                    <img src="https://img.icons8.com/color/96/000000/discord-logo.png" alt="Discord">
+                    <span>JOIN DISCORD</span>
+                </a>
+                <a href="https://ro.blox.com/Ebh5?af_dp=roblox%3A%2F%2Fnavigation%2Fgame_details%3FgameId%3D9600275324&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2F140529184232468" target="_blank" class="mobile-menu__action mobile-menu__action--play">
+                    PLAY VERIDIA
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="home">
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <!-- STATIC Title (No Animation) -->
+                    <div class="hero__title-container">
+                        <h1 class="hero__title">
+                            GUNUNG VERIDIA<br>
+                            <span class="hero__title-highlight">ROBLOX MOUNTAIN</span>
+                        </h1>
+                    </div>
+                    
+                    <!-- STATIC Description (No Animation) -->
+                    <div class="hero__desc-container">
+                        <p class="hero__description">
+                            Experience the most advanced Roblox mountain adventure. 
+                            Conquer challenging routes, explore hidden caves, and 
+                            reach legendary summits with friends.
+                        </p>
+                    </div>
+                    
+                    <!-- STATIC CTA Buttons (No Animation) -->
+                    <div class="hero__cta-container">
+                        <a href="https://ro.blox.com/Ebh5?af_dp=roblox%3A%2F%2Fnavigation%2Fgame_details%3FgameId%3D9600275324&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2F140529184232468" class="btn btn--xl btn--roblox">
+                            <div class="btn__icon-anim">
+                                <img src="https://img.icons8.com/color/96/000000/roblox.png" alt="Roblox">
+                            </div>
+                            <span class="btn__text">OPEN IN ROBLOX</span>
+                        </a>
+                        
+                        <a href="https://ro.blox.com/Ebh5?af_dp=roblox%3A%2F%2Fnavigation%2Fgame_details%3FgameId%3D9600275324&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2F140529184232468" target="_blank" class="btn btn--xl btn--secondary">
+                            <span class="btn__text">PLAY IN BROWSER</span>
+                        </a>
+                    </div>
+                    
+                    <!-- STATIC Stats (No Counter Animation) -->
+                    <div class="hero__stats">
+                        <div class="stat-card">
+                            <div class="stat-card__number">50+</div>
+                            <div class="stat-card__label">ACTIVE PLAYERS</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-card__number">100%</div>
+                            <div class="stat-card__label">AVG RATING</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-card__number">12+</div>
+                            <div class="stat-card__label">UNIQUE ROUTES</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Banner Background - FIXED POSITION -->
+            <div class="hero__banner">
+                <div class="hero__banner-overlay"></div>
+                <div class="hero__banner-gradient"></div>
+                <div class="hero__banner-lights">
+                    <div class="hero__banner-light hero__banner-light--1"></div>
+                    <div class="hero__banner-light hero__banner-light--2"></div>
+                    <div class="hero__banner-light hero__banner-light--3"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FEATURES ===== -->
+        <section class="features" id="features">
+            <div class="container">
+                <!-- Animated Section Header -->
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2 class="section-title">KENAPA GUNUNG VERIDIA?</h2>
+                        <div class="section-title-line"></div>
+                    </div>
+                    <div class="section-subtitle-wrapper">
+                        <p class="section-subtitle">
+                            Discover unique features that make climbing legendary
+                        </p>
+                        <div class="section-subtitle-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Slider -->
+                <div class="features__slider-container">
+                    <div class="slider__track-wrapper">
+                        <div class="slider__track" id="featuresTrack">
+                            <!-- Card 1 -->
+                            <div class="feature-card">
+                                <div class="feature-card__inner">
+                                    <div class="feature-card__header">
+                                        <div class="feature-card__icon-wrapper">
+                                            <div class="feature-card__icon-bg"></div>
+                                            <div class="feature-card__icon">
+                                                <div class="feature-card__icon-inner">
+                                                    <img src="assets/icon-route.png" alt="Basecamp">
+                                                </div>
+                                                <div class="feature-card__icon-glow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="feature-card__number">01</div>
+                                    </div>
+                                    
+                                    <div class="feature-card__content">
+                                        <h3 class="feature-card__title">BASE CAMP HUB</h3>
+                                        <p class="feature-card__desc">
+                                            Mulai petualanganmu di basecamp yang hidup. 
+                                            Lengkap dengan area kumpul, persiapan gear, dan titik awal berbagai jalur pendakian.
+                                        </p>
+                                        <div class="feature-card__line"></div>
+                                    </div>
+                                    
+                                    <div class="feature-card__hover">
+                                        <div class="feature-card__hover-bg"></div>
+                                        <div class="feature-card__hover-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="feature-card">
+                                <div class="feature-card__inner">
+                                    <div class="feature-card__header">
+                                        <div class="feature-card__icon-wrapper">
+                                            <div class="feature-card__icon-bg"></div>
+                                            <div class="feature-card__icon">
+                                                <div class="feature-card__icon-inner">
+                                                    <img src="assets/icon-neon.png" alt="Parkour">
+                                                </div>
+                                                <div class="feature-card__icon-glow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="feature-card__number">02</div>
+                                    </div>
+                                    
+                                    <div class="feature-card__content">
+                                        <h3 class="feature-card__title">PARKOUR ROUTES</h3>
+                                        <p class="feature-card__desc">
+                                            Jalur parkour dengan tingkat kesulitan berbeda. 
+                                            Dari rute santai sampai jalur ekstrem untuk climber berpengalaman.
+                                        </p>
+                                        <div class="feature-card__line"></div>
+                                    </div>
+                                    
+                                    <div class="feature-card__hover">
+                                        <div class="feature-card__hover-bg"></div>
+                                        <div class="feature-card__hover-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 3 -->
+                            <div class="feature-card">
+                                <div class="feature-card__inner">
+                                    <div class="feature-card__header">
+                                        <div class="feature-card__icon-wrapper">
+                                            <div class="feature-card__icon-bg"></div>
+                                            <div class="feature-card__icon">
+                                                <div class="feature-card__icon-inner">
+                                                    <img src="assets/icon-friends.png" alt="Friends">
+                                                </div>
+                                                <div class="feature-card__icon-glow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="feature-card__number">03</div>
+                                    </div>
+                                    
+                                    <div class="feature-card__content">
+                                        <h3 class="feature-card__title">FRIENDLY COMMUNITY</h3>
+                                        <p class="feature-card__desc">
+                                            Komunitas aktif dan ramah. 
+                                            Temukan teman baru, party bareng, dan capai summit bersama tanpa toxic vibes.
+                                        </p>
+                                        <div class="feature-card__line"></div>
+                                    </div>
+                                    
+                                    <div class="feature-card__hover">
+                                        <div class="feature-card__hover-bg"></div>
+                                        <div class="feature-card__hover-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 4 -->
+                            <div class="feature-card">
+                                <div class="feature-card__inner">
+                                    <div class="feature-card__header">
+                                        <div class="feature-card__icon-wrapper">
+                                            <div class="feature-card__icon-bg"></div>
+                                            <div class="feature-card__icon">
+                                                <div class="feature-card__icon-inner">
+                                                    <img src="assets/icon-camp.png" alt="Neon">
+                                                </div>
+                                                <div class="feature-card__icon-glow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="feature-card__number">04</div>
+                                    </div>
+                                    
+                                    <div class="feature-card__content">
+                                        <h3 class="feature-card__title">SURVIVAL EXPERIENCE</h3>
+                                        <p class="feature-card__desc">
+                                            Cuaca, ketinggian, dan rute berbahaya menuntut strategi. 
+                                            Salah langkah bisa bikin jatuh—fokus dan teamwork jadi kunci.
+                                        </p>
+                                        <div class="feature-card__line"></div>
+                                    </div>
+                                    
+                                    <div class="feature-card__hover">
+                                        <div class="feature-card__hover-bg"></div>
+                                        <div class="feature-card__hover-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Enhanced Slider Controls -->
+                    <div class="slider__controls">
+                        <button class="slider__btn slider__btn--prev" id="prevBtn">
+                            <div class="slider__btn-inner">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <div class="slider__btn-glow"></div>
+                            </div>
+                        </button>
+                        
+                        <div class="slider__dots">
+                            <span class="slider__dot slider__dot--active"></span>
+                            <span class="slider__dot"></span>
+                            <span class="slider__dot"></span>
+                            <span class="slider__dot"></span>
+                        </div>
+                        
+                        <button class="slider__btn slider__btn--next" id="nextBtn">
+                            <div class="slider__btn-inner">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <div class="slider__btn-glow"></div>
+                            </div>
+                        </button>
+                    </div>
+                    
+                    <div class="slider__progress">
+                        <div class="slider__progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section Background Elements -->
+            <div class="features__bg">
+                <div class="features__bg-shape features__bg-shape--1"></div>
+                <div class="features__bg-shape features__bg-shape--2"></div>
+                <div class="features__bg-shape features__bg-shape--3"></div>
+            </div>
+        </section>
+
+        <!-- ===== UPDATES ===== -->
+        <section class="updates" id="updates">
+            <div class="container">
+                <!-- Animated Section Header -->
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2 class="section-title">LATEST UPDATES</h2>
+                        <div class="section-title-line"></div>
+                    </div>
+                    <div class="section-subtitle-wrapper">
+                        <p class="section-subtitle">Stay updated with our latest improvements</p>
+                        <div class="section-subtitle-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Update Cards -->
+                <div class="updates__grid">
+                    <!-- Update 1 -->
+                    <div class="update-card">
+                        <div class="update-card__inner">
+                            <div class="update-card__header">
+                                <div class="update-card__badge-wrapper">
+                                    <span class="update-card__badge update-card__badge--new">NEW</span>
+                                    <div class="update-card__badge-glow"></div>
+                                </div>
+                                <div class="update-card__version">v1.5.0</div>
+                                <div class="update-card__corner"></div>
+                            </div>
+                            
+                            <div class="update-card__content">
+                                <h3 class="update-card__title">BASECAMP SECURITY & FLOW</h3>
+                                <ul class="update-card__list">
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        Anti-grief system at basecamp
+                                    </li>
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        Spawn protection added
+                                    </li>
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        New UI System
+                                    </li>
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        Performance optimization
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="update-card__footer">
+                                <div class="update-card__date">Januari 2026</div>
+                                <div class="update-card__line"></div>
+                            </div>
+                            
+                            <div class="update-card__hover">
+                                <div class="update-card__hover-bg"></div>
+                                <div class="update-card__hover-shine"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Update 2 -->
+                    <div class="update-card">
+                        <div class="update-card__inner">
+                            <div class="update-card__header">
+                                <div class="update-card__badge-wrapper">
+                                    <span class="update-card__badge update-card__badge--update">UPDATE</span>
+                                    <div class="update-card__badge-glow"></div>
+                                </div>
+                                <div class="update-card__version">v1.4.0</div>
+                                <div class="update-card__corner"></div>
+                            </div>
+                            
+                            <div class="update-card__content">
+                                <h3 class="update-card__title">CLIMBING SYSTEM</h3>
+                                <ul class="update-card__list">
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        Fixed jump abuse on steep routes
+                                    </li>
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        Fix respawn bug
+                                    </li>
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        Fixed jump abuse on steep routes
+                                    </li>
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        Bug fixes & improvements
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="update-card__footer">
+                                <div class="update-card__date">Januari 2026</div>
+                                <div class="update-card__line"></div>
+                            </div>
+                            
+                            <div class="update-card__hover">
+                                <div class="update-card__hover-bg"></div>
+                                <div class="update-card__hover-shine"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Update 3 -->
+                    <div class="update-card">
+                        <div class="update-card__inner">
+                            <div class="update-card__header">
+                                <div class="update-card__badge-wrapper">
+                                    <span class="update-card__badge update-card__badge--patch">PATCH</span>
+                                    <div class="update-card__badge-glow"></div>
+                                </div>
+                                <div class="update-card__version">v1.3.2</div>
+                                <div class="update-card__corner"></div>
+                            </div>
+                            
+                            <div class="update-card__content">
+                                <h3 class="update-card__title">SECURITY PATCH</h3>
+                                <ul class="update-card__list">
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        Anti-exploit system implemented
+                                    </li>
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        Anti-cheat detection for speed & fly
+                                    </li>
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        Auto kick on suspicious movement
+                                    </li>
+                                    <li>
+                                        <span class="update-card__list-icon">+</span>
+                                        Improved server-side validation
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="update-card__footer">
+                                <div class="update-card__date">January 2026</div>
+                                <div class="update-card__line"></div>
+                            </div>
+                            
+                            <div class="update-card__hover">
+                                <div class="update-card__hover-bg"></div>
+                                <div class="update-card__hover-shine"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Update Particles -->
+            <div class="updates__particles">
+                <div class="updates__particle updates__particle--1"></div>
+                <div class="updates__particle updates__particle--2"></div>
+                <div class="updates__particle updates__particle--3"></div>
+                <div class="updates__particle updates__particle--4"></div>
+                <div class="updates__particle updates__particle--5"></div>
+            </div>
+        </section>
+
+        <!-- ===== TEAM ===== -->
+        <section class="team-section" id="team">
+            <div class="container">
+                <!-- Animated Section Header -->
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2 class="section-title">DEVELOPMENT TEAM</h2>
+                        <div class="section-title-line"></div>
+                    </div>
+                    <div class="section-subtitle-wrapper">
+                        <p class="section-subtitle">Meet the creators behind Mount Veridia</p>
+                        <div class="section-subtitle-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Team Cards -->
+                <div class="team__grid">
+                    <!-- Team Member 1 -->
+                    <div class="team-card">
+                        <div class="team-card__inner">
+                            <div class="team-card__avatar-container">
+                                <div class="team-card__avatar-wrapper">
+                                    <div class="team-card__avatar-border">
+                                        <div class="team-card__avatar-border-inner"></div>
+                                    </div>
+                                    <div class="team-card__avatar">
+                                        <img src="assets/owner.png" alt="Owner">
+                                        <div class="team-card__avatar-overlay"></div>
+                                    </div>
+                                    <div class="team-card__avatar-glow"></div>
+                                    <div class="team-card__avatar-pulse"></div>
+                                </div>
+                                
+                                <div class="team-card__status">
+                                    <div class="team-card__status-dot"></div>
+                                    <div class="team-card__status-ring"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="team-card__content">
+                                <div class="team-card__badge-wrapper">
+                                    <span class="team-card__badge">FOUNDER</span>
+                                    <div class="team-card__badge-line"></div>
+                                </div>
+                                
+                                <h3 class="team-card__name">Zytron000</h3>
+                                
+                                <div class="team-card__role">Project Lead & Founder Map</div>
+                                
+                                <p class="team-card__desc">
+                                    Leads the project direction and overall vision of Mount Veridia.
+                                </p>
+                                
+                                <div class="team-card__line"></div>
+                            </div>
+                            
+                            <div class="team-card__hover">
+                                <div class="team-card__hover-bg"></div>
+                                <div class="team-card__hover-light"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="team-card">
+                        <div class="team-card__inner">
+                            <div class="team-card__avatar-container">
+                                <div class="team-card__avatar-wrapper">
+                                    <div class="team-card__avatar-border">
+                                        <div class="team-card__avatar-border-inner"></div>
+                                    </div>
+                                    <div class="team-card__avatar">
+                                        <img src="https://img.icons8.com/color/96/000000/developer.png" alt="Developer">
+                                        <div class="team-card__avatar-overlay"></div>
+                                    </div>
+                                    <div class="team-card__avatar-glow"></div>
+                                    <div class="team-card__avatar-pulse"></div>
+                                </div>
+                                
+                                <div class="team-card__status">
+                                    <div class="team-card__status-dot"></div>
+                                    <div class="team-card__status-ring"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="team-card__content">
+                                <div class="team-card__badge-wrapper">
+                                    <span class="team-card__badge">DEVELOPER</span>
+                                    <div class="team-card__badge-line"></div>
+                                </div>
+                                
+                                <h3 class="team-card__name">???xHUB</h3>
+                                
+                                <div class="team-card__role">Systems & Scripting</div>
+                                
+                                <p class="team-card__desc">
+                                    Handles game mechanics, scripting, and technical implementation.
+                                </p>
+                                
+                                <div class="team-card__line"></div>
+                            </div>
+                            
+                            <div class="team-card__hover">
+                                <div class="team-card__hover-bg"></div>
+                                <div class="team-card__hover-light"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="team-card">
+                        <div class="team-card__inner">
+                            <div class="team-card__avatar-container">
+                                <div class="team-card__avatar-wrapper">
+                                    <div class="team-card__avatar-border">
+                                        <div class="team-card__avatar-border-inner"></div>
+                                    </div>
+                                    <div class="team-card__avatar">
+                                        <img src="assets/adminn.png" alt="Admin">
+                                        <div class="team-card__avatar-overlay"></div>
+                                    </div>
+                                    <div class="team-card__avatar-glow"></div>
+                                    <div class="team-card__avatar-pulse"></div>
+                                </div>
+                                
+                                <div class="team-card__status">
+                                    <div class="team-card__status-dot"></div>
+                                    <div class="team-card__status-ring"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="team-card__content">
+                                <div class="team-card__badge-wrapper">
+                                    <span class="team-card__badge">ADMIN</span>
+                                    <div class="team-card__badge-line"></div>
+                                </div>
+                                
+                                <h3 class="team-card__name">BEBOTT</h3>
+                                
+                                <div class="team-card__role">Community Management</div>
+                                
+                                <p class="team-card__desc">
+                                    Manages the community and ensures a positive gaming environment.
+                                </p>
+                                
+                                <div class="team-card__line"></div>
+                            </div>
+                            
+                            <div class="team-card__hover">
+                                <div class="team-card__hover-bg"></div>
+                                <div class="team-card__hover-light"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Background -->
+            <div class="team-section__bg">
+                <div class="team-section__bg-circle team-section__bg-circle--1"></div>
+                <div class="team-section__bg-circle team-section__bg-circle--2"></div>
+                <div class="team-section__bg-circle team-section__bg-circle--3"></div>
+            </div>
+        </section>
+
+        <!-- ===== COMMUNITY ===== -->
+        <section class="community-section" id="community">
+            <div class="container">
+                <div class="community-card">
+                    <div class="community-card__inner">
+                        <div class="community-card__content">
+                            <div class="community-card__title-wrapper">
+                                <h2 class="community-card__title">JOIN OUR COMMUNITY</h2>
+                                <div class="community-card__title-line"></div>
+                            </div>
+                            
+                            <div class="community-card__desc-wrapper">
+                                <p class="community-card__desc">
+                                    Connect with thousands of players, share your climbing achievements, 
+                                    and stay updated with the latest news and events.
+                                </p>
+                                <div class="community-card__desc-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            
+                            <div class="community-card__buttons">
+                                <a href="https://discord.gg/roblox" target="_blank" class="btn btn--discord btn--lg">
+                                    <div class="btn__icon-anim">
+                                        <img src="https://img.icons8.com/color/96/000000/discord-logo.png" alt="Discord">
+                                        <div class="btn__icon-rings">
+                                            <div class="btn__icon-ring btn__icon-ring--1"></div>
+                                            <div class="btn__icon-ring btn__icon-ring--2"></div>
+                                        </div>
+                                    </div>
+                                    <span class="btn__text">JOIN DISCORD</span>
+                                    <div class="btn__pulse"></div>
+                                </a>
+                                
+                                <a href="https://www.tiktok.com/@roblox" target="_blank" class="btn btn--tiktok btn--lg">
+                                    <div class="btn__icon-anim">
+                                        <img src="https://img.icons8.com/color/96/000000/tiktok.png" alt="TikTok">
+                                        <div class="btn__icon-rings">
+                                            <div class="btn__icon-ring btn__icon-ring--1"></div>
+                                            <div class="btn__icon-ring btn__icon-ring--2"></div>
+                                        </div>
+                                    </div>
+                                    <span class="btn__text">FOLLOW TIKTOK</span>
+                                    <div class="btn__pulse"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="community-card__effects">
+                        <div class="community-card__effect community-card__effect--1"></div>
+                        <div class="community-card__effect community-card__effect--2"></div>
+                        <div class="community-card__effect community-card__effect--3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SUPPORT ===== -->
+        <section class="support">
+            <div class="container">
+                <div class="support-card">
+                    <div class="support-card__inner">
+                        <div class="support-card__content">
+                            <div class="support-card__title-wrapper">
+                                <h2 class="support-card__title">SUPPORT MOUNT VERIDIA</h2>
+                                <div class="support-card__title-line"></div>
+                            </div>
+                            
+                            <div class="support-card__desc-wrapper">
+                                <p class="support-card__desc">
+                                    Your support helps us continue development and bring more amazing features. 
+                                    All supporters receive special in-game perks!
+                                </p>
+                                <div class="support-card__desc-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            
+                            <div class="support-card__buttons">
+                                <a href="https://saweria.co/VERIDIA" target="_blank" class="btn btn--support btn--saweria">
+                                    <span class="btn__text">SUPPORT VIA SAWERIA</span>
+                                    <div class="btn__shine"></div>
+                                    <div class="btn__sparks">
+                                        <span class="btn__spark"></span>
+                                        <span class="btn__spark"></span>
+                                        <span class="btn__spark"></span>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://ro.blox.com/Ebh5?af_dp=roblox%3A%2F%2Fnavigation%2Fgame_details%3FgameId%3D9600275324&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2F140529184232468" target="_blank" class="btn btn--support btn--robux">
+                                    <span class="btn__text">VIA ROBUX</span>
+                                    <div class="btn__shine"></div>
+                                    <div class="btn__sparks">
+                                        <span class="btn__spark"></span>
+                                        <span class="btn__spark"></span>
+                                        <span class="btn__spark"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="support-card__floating">
+                        <div class="support-card__float support-card__float--1">★</div>
+                        <div class="support-card__float support-card__float--2">❤</div>
+                        <div class="support-card__float support-card__float--3">⚡</div>
+                        <div class="support-card__float support-card__float--4">🎮</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FOOTER (GACOR PARAH) ===== -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <!-- Footer Top -->
+                    <div class="footer__top">
+                        <div class="footer__logo-section">
+                            <div class="footer__logo-container">
+                                <div class="footer__logo-wrapper">
+                                    <img src="https://img.icons8.com/color/96/000000/roblox.png" alt="Mount Veridia" class="footer__logo">
+                                    <div class="footer__logo-glow"></div>
+                                    <div class="footer__logo-pulse"></div>
+                                </div>
+                                
+                                <div class="footer__logo-text">
+                                    <div class="footer__logo-title-wrapper">
+                                        <span class="footer__logo-title">MOUNT VERIDIA</span>
+                                        <div class="footer__logo-title-line"></div>
+                                    </div>
+                                    <span class="footer__logo-sub">SELAMAT BERMAIN SEMOGA BETAH DISINI</span>
+                                </div>
+                            </div>
+                            
+                            <div class="footer__logo-desc">
+                                Experience the most advanced mountain climbing adventure on Roblox.
+                                Conquer peaks, explore mysteries, and create legends.
+                            </div>
+                        </div>
+                        
+                        <div class="footer__links-section">
+                            <div class="footer__links-group">
+                                <div class="footer__links-title">GAME</div>
+                                <div class="footer__links-list">
+                                    <a href="#home" class="footer__link">
+                                        <span class="footer__link-text">Home</span>
+                                        <span class="footer__link-line"></span>
+                                    </a>
+                                    <a href="#features" class="footer__link">
+                                        <span class="footer__link-text">Features</span>
+                                        <span class="footer__link-line"></span>
+                                    </a>
+                                    <a href="#updates" class="footer__link">
+                                        <span class="footer__link-text">Updates</span>
+                                        <span class="footer__link-line"></span>
+                                    </a>
+                                    <a href="#team" class="footer__link">
+                                        <span class="footer__link-text">Team</span>
+                                        <span class="footer__link-line"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="footer__links-group">
+                                <div class="footer__links-title">COMMUNITY</div>
+                                <div class="footer__links-list">
+                                    <a href="#community" class="footer__link">
+                                        <span class="footer__link-text">Join Discord</span>
+                                        <span class="footer__link-line"></span>
+                                    </a>
+                                    <a href="https://tiktok.com/@roblox" target="_blank" class="footer__link">
+                                        <span class="footer__link-text">TikTok</span>
+                                        <span class="footer__link-line"></span>
+                                    </a>
+                                    <a href="#support" class="footer__link">
+                                        <span class="footer__link-text">Support Us</span>
+                                        <span class="footer__link-line"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="footer__links-group">
+                                <div class="footer__links-title">LEGAL</div>
+                                <div class="footer__links-list">
+                                    <a href="#" class="footer__link">
+                                        <span class="footer__link-text">Privacy Policy</span>
+                                        <span class="footer__link-line"></span>
+                                    </a>
+                                    <a href="#" class="footer__link">
+                                        <span class="footer__link-text">Terms of Service</span>
+                                        <span class="footer__link-line"></span>
+                                    </a>
+                                    <a href="#" class="footer__link">
+                                        <span class="footer__link-text">Rules</span>
+                                        <span class="footer__link-line"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Footer Middle -->
+                    <div class="footer__middle">
+                        <div class="footer__social">
+                            <div class="footer__social-title">CONNECT WITH US</div>
+                            <div class="footer__social-icons">
+                                <a href="https://discord.gg/roblox" target="_blank" class="footer__social-link">
+                                    <div class="footer__social-icon">
+                                        <img src="https://img.icons8.com/color/96/000000/discord-logo.png" alt="Discord">
+                                        <div class="footer__social-glow"></div>
+                                        <div class="footer__social-ring"></div>
+                                    </div>
+                                    <span class="footer__social-text">Discord</span>
+                                </a>
+                                
+                                <a href="https://www.tiktok.com/@mountveridia/" target="_blank" class="footer__social-link">
+                                    <div class="footer__social-icon">
+                                        <img src="https://img.icons8.com/color/96/000000/tiktok.png" alt="TikTok">
+                                        <div class="footer__social-glow"></div>
+                                        <div class="footer__social-ring"></div>
+                                    </div>
+                                    <span class="footer__social-text">TikTok</span>
+                                </a>
+                                
+                                <a href="https://ro.blox.com/Ebh5?af_dp=roblox%3A%2F%2Fnavigation%2Fgame_details%3FgameId%3D9600275324&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2F140529184232468" target="_blank" class="footer__social-link">
+                                    <div class="footer__social-icon">
+                                        <img src="https://img.icons8.com/color/96/000000/roblox.png" alt="Roblox">
+                                        <div class="footer__social-glow"></div>
+                                        <div class="footer__social-ring"></div>
+                                    </div>
+                                    <span class="footer__social-text">Roblox</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="footer__newsletter">
+                            <div class="footer__newsletter-title">STAY UPDATED</div>
+                            <div class="footer__newsletter-form">
+                                <input type="email" placeholder="Your Email" class="footer__newsletter-input">
+                                <button class="footer__newsletter-btn">
+                                    <span>Subscribe</span>
+                                    <div class="footer__newsletter-btn-glow"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Footer Bottom -->
+                    <div class="footer__bottom">
+                        <div class="footer__copyright">
+                            <div class="footer__copyright-text">
+                                © 2026 MOUNT VERIDIA. All rights reserved.<br>
+                                Roblox is a registered trademark of Roblox Corporation.
+                            </div>
+                            <div class="footer__copyright-links">
+                                <a href="#">Privacy</a>
+                                <span class="footer__copyright-divider">•</span>
+                                <a href="#">Terms</a>
+                                <span class="footer__copyright-divider">•</span>
+                                <a href="#">Cookies</a>
+                            </div>
+                        </div>
+                        
+                        <div class="footer__badge">
+                            <div class="footer__badge-icon">Veridia</div>
+                            <div class="footer__badge-text">Made By Zytron000</div>
+                            <div class="footer__badge-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Effects -->
+            <div class="footer__effects">
+                <div class="footer__effect footer__effect--1"></div>
+                <div class="footer__effect footer__effect--2"></div>
+                <div class="footer__effect footer__effect--3"></div>
+            </div>
+            
+            <!-- Back to Top -->
+            <button class="footer__back-to-top" id="backToTop">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <div class="footer__back-to-top-glow"></div>
+            </button>
+        </footer>
+    </main>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="app.js"></script>
+</body>
+</html>
