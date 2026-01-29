@@ -1,6 +1,6 @@
 <!-- FIRE ANIMATION -->
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=40&duration=3000&pause=1000&color=7C5CFF&center=true&vCenter=true&width=1000&lines=🔥+GUNUNG+ROBLOX+LIVE+TRACKING+🔥;🎮+gunungroblox.my.id+🎮;👁️+REAL-TIME+VIEWERS+👁️" alt="Animated Text" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=40&duration=3000&pause=1000&color=7C5CFF&center=true&vCenter=true&width=1000&lines=+LIVE+TRACKING+;🎮+gunungroblox.my.id+🎮;👁️+REAL-TIME+VIEWERS+👁️" alt="Animated Text" />
 </h1>
 
 <!-- MAIN COUNTER -->
